@@ -1,27 +1,17 @@
-
-
 def steps(number):
-    if int(number) > 0:
-            new_number = []
-            while number != 1: 
-                if number % 2 == 0: number / 2 
-                else: 
-                    3 * number + 1
-                new_number += number
-    else:
-         raise ValueError("Only positive integers are allowed")
-         
+    if int(number) <= 0:
+        raise ValueError("Only positive integers are allowed")
+    
+    operations_amount = 0
+    while number != 1: 
+        if number % 2 == 0: 
+            number = number / 2 
+        else: 
+            number = 3 * number + 1
+        operations_amount += 1
 
-    steps_number = len(new_number)
-
-
-                    
-
-
-            
-
+    return operations_amount
         
-
 
 
 """# Collatz Conjecture
